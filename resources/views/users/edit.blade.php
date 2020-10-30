@@ -1,4 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.app', [
+    'class' => 'sidebar-mini ',
+    'namePage' => 'Edit User',
+    'activePage' => 'users',
+    'activeNav' => '',
+])
 
 @section('content')
 
@@ -8,11 +13,14 @@
                 <div class="panel-heading">{{ __('website.users') }}</div>
 
                 <div class="panel-body">
-                    <form class="form-horizontal" id="campusForm" method="POST"
-                          action="{{ route("users.update", [$item->id]) }}">
+                    <form class="form-horizontal" id="campusForm" method="POST"  autocomplete="off"
+                        enctype="multipart/form-data" action="{{ route("users.update", [$item->id]) }}">
                         {{ csrf_field() }}
+                           
+                          @csrf
+                          @method('put')
+                          @include('alerts.success')
 
-                        {{method_field('POST')}}
                         <input type="hidden" name="id" class="form-control" value="{{$item->id}}" readonly required>
 
 

@@ -3,12 +3,12 @@
     Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
 -->
   <div class="logo">
-    <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+   <!--  <a href="http://www.creative-tim.com" class="simple-text logo-mini">
       {{ __('CT') }}
     </a>
     <a href="http://www.creative-tim.com" class="simple-text logo-normal">
       {{ __('Creative Tim') }}
-    </a>
+    </a> -->
   </div>
   <div class="sidebar-wrapper" id="sidebar-wrapper">
     <ul class="nav">
@@ -35,7 +35,7 @@
               </a>
             </li>
             <li class="@if ($activePage == 'users') active @endif">
-              <a href="{{ route('user.index') }}">
+              <a href="{{ route('users.index') }}">
                 <i class="now-ui-icons design_bullet-list-67"></i>
                 <p> {{ __("User Management") }} </p>
               </a>
