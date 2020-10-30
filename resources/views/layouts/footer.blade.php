@@ -1,5 +1,5 @@
 <footer class="footer">
-  <div class=" container-fluid ">
+<!--   <div class=" container-fluid ">
     <nav>
       <ul>
         <li>
@@ -32,5 +32,5 @@
       <a href="https://www.creative-tim.com" target="_blank">{{__(" Creative Tim ")}}</a>&
       <a href="https://www.updivision.com" target="_blank">{{__(" Updivision")}}</a>
     </div>
-  </div>
+  </div> -->
 </footer>

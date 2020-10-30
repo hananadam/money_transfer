@@ -22,7 +22,7 @@
         <a data-toggle="collapse" href="#laravelExamples">
             <i class="fab fa-laravel"></i>
           <p>
-            {{ __("Laravel Examples") }}
+            {{ __("User") }}
             <b class="caret"></b>
           </p>
         </a>
@@ -45,39 +45,39 @@
       <li class="@if ($activePage == 'icons') active @endif">
         <a href="{{ route('page.index','icons') }}">
           <i class="now-ui-icons education_atom"></i>
-          <p>{{ __('Icons') }}</p>
+          <p>{{ __('Companies') }}</p>
         </a>
       </li>
       <li class = "@if ($activePage == 'maps') active @endif">
         <a href="{{ route('page.index','maps') }}">
           <i class="now-ui-icons location_map-big"></i>
-          <p>{{ __('Maps') }}</p>
+          <p>{{ __('Agencies') }}</p>
         </a>
       </li>
       <li class = " @if ($activePage == 'notifications') active @endif">
         <a href="{{ route('page.index','notifications') }}">
           <i class="now-ui-icons ui-1_bell-53"></i>
-          <p>{{ __('Notifications') }}</p>
+          <p>{{ __('Branches') }}</p>
         </a>
       </li>
       <li class = " @if ($activePage == 'table') active @endif">
         <a href="{{ route('page.index','table') }}">
           <i class="now-ui-icons design_bullet-list-67"></i>
-          <p>{{ __('Table List') }}</p>
+          <p>{{ __('Currency') }}</p>
         </a>
       </li>
       <li class = "@if ($activePage == 'typography') active @endif">
         <a href="{{ route('page.index','typography') }}">
           <i class="now-ui-icons text_caps-small"></i>
-          <p>{{ __('Typography') }}</p>
+          <p>{{ __('Transfer Rates') }}</p>
         </a>
       </li>
-      <li class = "">
+     <!--  <li class = "">
         <a href="{{ route('page.index','upgrade') }}" class="bg-info">
           <i class="now-ui-icons arrows-1_cloud-download-93"></i>
           <p>{{ __('Upgrade to PRO') }}</p>
         </a>
-      </li>
+      </li> -->
     </ul>
   </div>
 </div>

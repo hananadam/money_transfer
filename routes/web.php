@@ -35,7 +35,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 // Room -----------------------------------------------------------
 
-Route::get('/room', 'RoomController@index')->name('Room');
+Route::get('/room', 'App\Http\Controllers\RoomController@index')->name('Room');
 Route::get('/displayAddRoom', 'RoomController@viewAddRoom')->name('DisplayAddRoom');
 Route::get('/displayUpdRoom/{room_code}', 'RoomController@viewUpdRoom')->name('DisplayUpdateRoom');
 Route::post('/createRoom', 'RoomController@createRoom')->name('CreateRoom');
