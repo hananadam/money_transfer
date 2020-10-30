@@ -15,6 +15,7 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
+            'role_id' => 1,
             'name' => 'Admin',
             'email' => 'admin@nowui.com',
             'email_verified_at' => now(),
