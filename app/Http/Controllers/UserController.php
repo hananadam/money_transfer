@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\HrEmployee;
 use App\Models\User;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
@@ -12,7 +11,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\View\View;
 use Spatie\Permission\Role;
 use Hash;
-class UsersController extends Controller
+class UserController extends Controller
 {
     public function __construct()
     {
