@@ -1,13 +1,11 @@
 <?php
 
-namespace Database\Seeders;
-
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\PermissionRegistrar;
 use \App\Models\User;
-class PermissionsSeeder extends Seeder
+class PerSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -63,4 +61,4 @@ class PermissionsSeeder extends Seeder
         $role->givePermissionTo('delete Users');
 
     }
-}
+}        
