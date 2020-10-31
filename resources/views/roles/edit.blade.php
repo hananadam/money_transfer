@@ -1,18 +1,23 @@
-@extends('layouts.app')
+@extends('layouts.app', [
+    'class' => 'sidebar-mini ',
+    'namePage' => 'Edit Role',
+    'activePage' => 'roles',
+    'activeNav' => '',
+])
 
 @section('content')
 
     <div class="row" style="margin-top:1%">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading">{{ __('website.roles') }}</div>
+                <!-- <div class="panel-heading">{{ __('website.roles') }}</div> -->
 
                 <div class="panel-body">
                     <form class="form-horizontal" id="campusForm" method="POST"
                           action="{{ route('roles.update', [$item->id]) }}">
                         {{ csrf_field() }}
 
-                        {{method_field('POST')}}
+                        {{method_field('PUT')}}
                         <input type="hidden" name="id" class="form-control" value="{{$item->id}}" readonly required>
 
 

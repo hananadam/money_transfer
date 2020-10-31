@@ -1,7 +1,7 @@
 @extends('layouts.app', [
     'class' => 'sidebar-mini ',
-    'namePage' => 'Create Role',
-    'activePage' => 'users',
+    'namePage' => 'Create currency',
+    'activePage' => 'currency',
     'activeNav' => '',
 ])
 
@@ -12,10 +12,10 @@
     <div class="row" style="margin-top:1%">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <!-- <div class="panel-heading">{{ __('website.roles') }}</div> -->
+                <!-- <div class="panel-heading">{{ __('website.add_company') }}</div> -->
 
                 <div class="panel-body">
-                    <form class="form-horizontal" id="campusForm" method="POST" action="{{ route("roles.store") }}">
+                    <form class="form-horizontal" id="campusForm" method="POST" action="{{ route("currency.store") }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -30,7 +30,6 @@
                                 @endif
                             </div>
                         </div>
-
 
                         <div class="ln_solid"></div>
 

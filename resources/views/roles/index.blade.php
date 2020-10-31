@@ -1,6 +1,13 @@
-@extends('layouts.app')
+@extends('layouts.app', [
+    'class' => 'sidebar-mini ',
+    'namePage' => 'Roles',
+    'activePage' => 'roles',
+    'activeNav' => '',
+])
 
 @section('content')
+<div class="panel-header panel-header-sm">
+  </div>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -32,18 +39,18 @@
                                         <td>{{$item->name}}</td>
                                         <td>
                                             @can('view Permissions To Role')
-                                                <a class="btn btn-primary " href="{{ route('rolePermissions.edit', $item->id) }}">{{ __('website.permissions') }}</a>
+                                                <a class="btn btn-success btn-sm " href="{{ route('rolePermissions.edit', $item->id) }}">{{ __('website.permissions') }}</a>
                                             @endcan
                                             @can('edit Roles')
-                                                <a class="btn btn-primary " href="{{ route('roles.edit', $item->id) }}">{{ __('website.edit') }}</a>
+                                                <a class="btn btn-primary btn-sm" href="{{ route('roles.edit', $item->id) }}">{{ __('website.edit') }}</a>
                                             @endcan
                                             @can('delete Roles')
                                                 <form action="{{ route('roles.destroy', $item->id) }}" method="POST"
                                                       onsubmit="return confirm('{{ trans('Are you sure') }}');"
                                                       style="">
-                                                    <input type="hidden" name="_method" value="POST">
+                                                    <input type="hidden" name="_method" value="DELETE">
                                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                                    <input type="submit" class="btn  btn-danger" value="{{__('website.delete') }}">
+                                                    <input type="submit" class="btn  btn-danger btn-sm" value="{{__('website.delete') }}">
                                                 </form>
                                             @endcan
                                         </td>

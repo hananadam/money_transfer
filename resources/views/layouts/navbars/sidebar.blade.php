@@ -22,7 +22,7 @@
         <a data-toggle="collapse" href="#laravelExamples">
             <i class="fab fa-laravel"></i>
           <p>
-            {{ __("User") }}
+            {{ __("User Management") }}
             <b class="caret"></b>
           </p>
         </a>
@@ -37,31 +37,37 @@
             <li class="@if ($activePage == 'users') active @endif">
               <a href="{{ route('users.index') }}">
                 <i class="now-ui-icons design_bullet-list-67"></i>
-                <p> {{ __("User Management") }} </p>
+                <p> {{ __("Users") }} </p>
+              </a>
+            </li>
+            <li class="@if ($activePage == 'roles') active @endif">
+              <a href="{{ route('roles.index') }}">
+                <i class="now-ui-icons design_bullet-list-67"></i>
+                <p> {{ __("Roles") }} </p>
               </a>
             </li>
           </ul>
         </div>
-      <li class="@if ($activePage == 'icons') active @endif">
-        <a href="{{ route('page.index','icons') }}">
+      <li class="@if ($activePage == 'companies') active @endif">
+        <a href="{{ route('companies.index') }}">
           <i class="now-ui-icons education_atom"></i>
           <p>{{ __('Companies') }}</p>
         </a>
       </li>
       <li class = "@if ($activePage == 'maps') active @endif">
-        <a href="{{ route('page.index','maps') }}">
+        <a href="{{ route('agencies.index') }}">
           <i class="now-ui-icons location_map-big"></i>
           <p>{{ __('Agencies') }}</p>
         </a>
       </li>
-      <li class = " @if ($activePage == 'notifications') active @endif">
-        <a href="{{ route('page.index','notifications') }}">
+      <li class = " @if ($activePage == 'branches') active @endif">
+        <a href="{{ route('branches.index') }}">
           <i class="now-ui-icons ui-1_bell-53"></i>
           <p>{{ __('Branches') }}</p>
         </a>
       </li>
       <li class = " @if ($activePage == 'table') active @endif">
-        <a href="{{ route('page.index','table') }}">
+        <a href="{{ route('currency.index') }}">
           <i class="now-ui-icons design_bullet-list-67"></i>
           <p>{{ __('Currency') }}</p>
         </a>

@@ -1,4 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.app', [
+    'class' => 'sidebar-mini ',
+    'namePage' => 'Roles Permissions',
+    'activePage' => 'roles',
+    'activeNav' => '',
+])
 
 @section('content')
 

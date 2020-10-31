@@ -301,6 +301,26 @@ return[
     'delete'                                        => 'مسح',
     'permissions'                                   => 'الادوار',
     'submit'                                        => 'اضافة',
+    'date'                                          => 'تاريخ الاضافة',
+    'website'                                       => 'اسم الموقع',
+
+    'currency'                                      => 'العملات',
+    'add_currency'                                  => 'اضافة عملة',
+    'companies'                                     => 'الشركات',
+    'company_name'                                  => 'الشركة',
+    'add_company'                                   => 'اضافة شركة',
+    'agencies'                                      => 'الوكلات',
+    'add_agency'                                    => 'اضافة وكالة',
+    'agency_name'                                   => 'اسم الوكالة',
+    'branches'                                      => 'الفروع',
+    'add_branch'                                    => 'اضافة فرع',
+    'location'                                      => 'الموقع',
+    'longitude'                                     => 'خط الطول',
+    'latitude'                                      => 'خط العرض',
+    'TransferFee'                                   => 'نسب التحويلات',
+
+
+
 
 
 

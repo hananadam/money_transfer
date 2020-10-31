@@ -1,7 +1,7 @@
 @extends('layouts.app', [
     'class' => 'sidebar-mini ',
-    'namePage' => 'Edit User',
-    'activePage' => 'users',
+    'namePage' => 'Edit Company',
+    'activePage' => 'companies',
     'activeNav' => '',
 ])
 
@@ -11,11 +11,11 @@
     <div class="row" style="margin-top:1%">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <!-- <div class="panel-heading">{{ __('website.users') }}</div> -->
+                <!-- <div class="panel-heading">{{ __('website.companies') }}</div> -->
 
                 <div class="panel-body">
                     <form class="form-horizontal" id="campusForm" method="POST"  autocomplete="off"
-                        enctype="multipart/form-data" action="{{ route("users.update", [$item->id]) }}">
+                        enctype="multipart/form-data" action="{{ route("companies.update", [$item->id]) }}">
                         {{ csrf_field() }}
                            
                           @csrf
@@ -39,6 +39,32 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
+                            <label for="address" class="col-md-4 control-label">{{ __('website.address') }} </label>
+                            <div class="col-md-6">
+                                <input name="address" id="address" type="text" class="form-control" value="{{ $item->address }}" autofocus>
+
+                                @if ($errors->has('address'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('address') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                         <div class="form-group{{ $errors->has('website') ? ' has-error' : '' }}">
+                            <label for="website" class="col-md-4 control-label">{{ __('website.website') }} </label>
+                            <div class="col-md-6">
+                                <input name="website" id="website" type="text" class="form-control"  value="{{ $item->website}}" autofocus>
+
+                                @if ($errors->has('website'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('website') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">{{ __('website.email') }} </label>
                             <div class="col-md-6">
@@ -53,36 +79,6 @@
                             </div>
                         </div>
 
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">{{ __('website.password') }} </label>
-                            <div class="col-md-6">
-                                <input name="password" id="name" type="password" class="form-control" autofocus>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('role_id') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">{{ __('website.role') }} </label>
-                            <div class="col-md-6">
-                                <select name="role_id" class="form-control" required="">
-                                    @foreach(\Spatie\Permission\Models\Role::where('id', '!=', 1)->get() as $role)
-                                        <option value="{{ $role->id }}"
-                                                @if($item->role_id == $role->id) selected @endif>{{ $role->name }}</option>
-                                    @endforeach
-                                </select>
-                                @if ($errors->has('role_id'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('role_id') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
 
 
                         <div class="ln_solid"></div>

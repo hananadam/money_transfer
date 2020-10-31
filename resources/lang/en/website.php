@@ -304,6 +304,25 @@ return[
     'delete'                                        => 'Delete',
     'permissions'                                   => 'Permissions',
     'submit'                                        => 'Submit',
+    'date'                                          => 'Date',
+
+    'currency'                                      => 'Currency',
+    'add_currency'                                  => 'Add Currency',
+    'website'                                       => 'Website',
+    'companies'                                     => 'Companies',
+    'add_company'                                   => 'Add Company',
+    'company_name'                                  => 'Company Name',
+    'agencies'                                      => 'Agencies',
+    'add_agency'                                    => 'Add Agency',
+    'agency_name'                                   => 'Agency Name',
+    'branches'                                      => 'Branchies',
+    'add_branch'                                    => 'Add Branch',
+    'location'                                      => 'Location',
+    'longitude'                                     => 'Longitude',
+    'latitude'                                      => 'Latitude',
+    'TransferFee'                                   => 'Transfer Fee',
+
+
 
 
 
