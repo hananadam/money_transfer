@@ -36,7 +36,7 @@
             </li>
             <li class="@if ($activePage == 'users') active @endif">
               <a href="{{ route('users.index') }}">
-                <i class="now-ui-icons design_bullet-list-67"></i>
+                <i class="now-ui-icons users_single-02"></i>
                 <p> {{ __("Users") }} </p>
               </a>
             </li>
@@ -62,7 +62,7 @@
       </li>
       <li class = " @if ($activePage == 'branches') active @endif">
         <a href="{{ route('branches.index') }}">
-          <i class="now-ui-icons ui-1_bell-53"></i>
+          <i class="now-ui-icons location_map-big"></i>
           <p>{{ __('Branches') }}</p>
         </a>
       </li>
@@ -72,8 +72,8 @@
           <p>{{ __('Currency') }}</p>
         </a>
       </li>
-      <li class = "@if ($activePage == 'typography') active @endif">
-        <a href="{{ route('page.index','typography') }}">
+      <li class = "@if ($activePage == 'transfer_rates') active @endif">
+        <a href="{{ route('transfer_rates.index') }}">
           <i class="now-ui-icons text_caps-small"></i>
           <p>{{ __('Transfer Rates') }}</p>
         </a>

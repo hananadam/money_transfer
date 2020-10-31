@@ -322,6 +322,13 @@ return[
     'latitude'                                      => 'Latitude',
     'TransferFee'                                   => 'Transfer Fee',
 
+    'currency_name'                                 => 'Currency Name',
+    'from_country'                                  => 'From Country',
+    'to_country'                                    => 'To Country',
+    'start_range'                                   => 'Range From',
+    'end_range'                                     => 'To Range',
+
+
 
 
 

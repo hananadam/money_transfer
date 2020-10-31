@@ -318,6 +318,11 @@ return[
     'longitude'                                     => 'خط الطول',
     'latitude'                                      => 'خط العرض',
     'TransferFee'                                   => 'نسب التحويلات',
+    'currency_name'                                   => 'العملة',
+    'from_country'                                   => 'من بلد',
+    'to_country'                                   => 'الي بلد',
+    'start_range'                                   => 'تبدآ من',
+    'end_range'                                   => 'الي',
 
 
 

@@ -21,6 +21,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
+Route::get('/', 'App\Http\Controllers\HomeController@index')->name('home');
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('users', 'App\Http\Controllers\UserController', ['except' => ['show']]);
@@ -35,6 +36,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::resource('agencies', 'App\Http\Controllers\AgenciesController');
 	Route::resource('branches', 'App\Http\Controllers\BranchesController');
 	Route::resource('currency', 'App\Http\Controllers\CurrencyController');
+	Route::resource('transfer_rates', 'App\Http\Controllers\TransferRatesController');
 
 
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);
