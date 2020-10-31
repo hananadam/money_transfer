@@ -61,7 +61,7 @@
                                     <select name="from_country[]" class="form-control" required="" style="width:150px;">
                                         <option value="" selected disabled>Select Country..</option>
                                         @foreach(App\Models\Country::get() as $country)
-                                            <option value="{{ $country->id }}">{{ $country->name }}</option>
+                                            <option value="{{ $country->name }}">{{ $country->name }}</option>
                                         @endforeach
                                     </select>
                                         @if ($errors->has('from_country'))
@@ -78,7 +78,7 @@
                                     <select name="to_country[]" class="form-control" required="" style="width:150px;">
                                         <option value="" selected disabled>Select Country..</option>
                                         @foreach(App\Models\Country::get() as $country)
-                                            <option value="{{ $country->id }}">{{ $country->name }}</option>
+                                            <option value="{{ $country->name }}">{{ $country->name }}</option>
                                         @endforeach
                                     </select>
                                         @if ($errors->has('to_country'))
@@ -126,15 +126,11 @@
                             </div>
 
                             <div class="form-group">
-                                <div class="col-md-3">
-                                    <button type="button" class="btn btn-success" id="add_new" style="margin-top: 50px;">+</button>
-                                </div>
+                                <button type="button" class="btn btn-success btn-sm" id="add_new" style="margin-top: 50px;">+</button>
                             </div>
 
                             <div class="form-group" >
-                                <div class="col-md-3">
-                                    <button type="button" class="btn btn-danger" id="remove" style="margin-top: 50px;">-</button>
-                                </div>
+                                <button type="button" class="btn btn-danger btn-sm" id="remove" style="margin-top: 50px;">-</button>
                             </div> 
                         </div>
                   

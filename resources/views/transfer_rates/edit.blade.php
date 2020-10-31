@@ -72,8 +72,8 @@
                                     <select name="from_country" class="form-control" required="" style="width:150px;">
                                         <option value="" selected disabled>Select Country..</option>
                                         @foreach(App\Models\Country::get() as $country)
-                                            <option value="{{ $country->id }}"
-                                                @if($item->from_country == $country->id) selected @endif>{{ $country->name }}
+                                            <option value="{{ $country->name }}"
+                                                @if($item->from_country == $country->name) selected @endif>{{ $country->name }}
                                             </option>
                                         @endforeach
                                     </select>
@@ -91,8 +91,8 @@
                                     <select name="to_country" class="form-control" required="" style="width:150px;">
                                         <option value="" selected disabled>Select Country..</option>
                                         @foreach(App\Models\Country::get() as $country)
-                                            <option value="{{ $country->id }}"
-                                                @if($item->to_country == $country->id) selected @endif>{{ $country->name }}
+                                            <option value="{{ $country->name }}"
+                                                @if($item->to_country == $country->name) selected @endif>{{ $country->name }}
                                             </option>
                                         @endforeach
                                     </select>
